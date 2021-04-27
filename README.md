@@ -33,4 +33,4 @@ Placed the search bar, weather and 5 day forcast using absolute positioning rela
 
  linked the start button to call the weather function and added the ofrcast function inside to call them both at the same time. 
 
- 
+ check out my hard work! @ https://jjarquin1.github.io/WeatherUpThere/

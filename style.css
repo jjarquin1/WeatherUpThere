@@ -23,6 +23,7 @@ aside {
     top:30px;
     left: 25%;
     width: 20%;
+    min-height: 350px;
     height: fit-content;
     background-color: darkorange;
     border-radius: 5px;
@@ -33,6 +34,7 @@ aside {
     top: 400px;
     left: 25%;
     width: 70%; 
+    min-height: 299px;
     height:auto;
     background-color: darkorange;
     border-radius: 5px;
@@ -48,6 +50,7 @@ aside {
     min-width: 70px ;
     height: fit-content;
     text-align: center;
+    justify-content: center;
     background-color: darkorange;
 }
 
@@ -62,6 +65,11 @@ aside {
     font-size: 50px;
 }
 
-.icon1 {
-    size: 20px;
+.iconc {
+    height: 70px;
+    width: 70px;
+}
+
+.tempc {
+    font-size: 50px;
 }

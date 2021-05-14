@@ -1,9 +1,9 @@
 
-var City = "";
-//var data = localStorage.getItem(City);
+var city = "";
+var data = localStorage.getItem(city);
 
 var Weather = function () {
-    if (City) {
+    if (city) {
         $('.city').empty();
         $('.icon').empty();
         $('.status').empty();
@@ -12,32 +12,33 @@ var Weather = function () {
         $('.wind').empty();
         $('.humidity').empty();
     }
-    City = $('.search').val().trim();
+    city = $('.search').val().trim();
 
    
-    localStorage.setItem(City, JSON.stringify(City));
+    localStorage.setItem(city,city);
 
-    localStorage.getItem(City).setItem('.append')
+   var cityValue = localStorage.getItem(city);
+    $('.append').append(cityValue)
 
-    $.getJSON(`http://api.openweathermap.org/data/2.5/weather?q=${City}&units=imperial&appid=4c5793fc59034c04babb0d0021abfcc3`, function (data) {
+    $.getJSON(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=4c5793fc59034c04babb0d0021abfcc3`, function (data) {
         console.log(data);
     
 
         var icon = "http://api.openweathermap.org/img/w/" + data.weather[0].icon + ".png";
         var temp = Math.floor(data.main.temp);
         var status = data.weather[0].description;
-        var city = data.name;
+        var cityName = data.name;
         var date = data.dt;
         var wind = Math.floor(data.wind.speed);
         var humidity = data.main.humidity;
 
+        var dateString = moment.unix(date).format("MM/DD/YYYY");
 
-
-        $('.city').append(city);
+        $('.city').append(cityName);
         $('.icon').attr('src', icon);
         $('.status').append(status);
         $('.temp').append(temp + ('\u2109'));
-        $('.date').append(date);
+        $('.date').append(dateString);
         $('.wind').append('wind:' + wind + 'mph');
         $('.humidity').append('humidity:' + humidity + '%');
 
@@ -49,14 +50,14 @@ $('#searchBtn').click(Weather)
 
 var forcast = function () {
 
-    if (City) {
+    if (city) {
         $('.datec').empty();
         $('.iconc').empty();
         $('.tempc').empty();
         $('.humidic').empty();
     }
 
-    $.getJSON(`http://api.openweathermap.org/data/2.5/forecast?q=${City}&units=imperial&appid=4c5793fc59034c04babb0d0021abfcc3`, function (data) {
+    $.getJSON(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=4c5793fc59034c04babb0d0021abfcc3`, function (data) {
         console.log(data);
 
         var date1 = data.list[3].dt_txt;

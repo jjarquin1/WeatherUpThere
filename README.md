@@ -17,14 +17,12 @@ Placed the search bar, weather and 5 day forcast using absolute positioning rela
 
  Weather and 5 day forcast height were both set to fit-content.
  
- <img width="1065" alt="Screen Shot 2021-04-26 at 10 45 21 PM" src="https://user-images.githubusercontent.com/77827825/116193468-48427000-a6e4-11eb-8271-57edb134b145.png">
 
 
  # Javacript 
 
  Created an empty string variabe named City
  
- <img width="1113" alt="Screen Shot 2021-04-26 at 10 46 23 PM" src="https://user-images.githubusercontent.com/77827825/116193551-64dea800-a6e4-11eb-81e4-4d5ba372028b.png">
 
 
  Created a function for the weather card named Weather and set an empty() to reset values for the classes. 
@@ -33,7 +31,7 @@ Placed the search bar, weather and 5 day forcast using absolute positioning rela
 
  for each search, set it to local storage, then added the City variable to parameters. 
  
- <img width="464" alt="Screen Shot 2021-04-26 at 10 44 53 PM" src="https://user-images.githubusercontent.com/77827825/116193582-71fb9700-a6e4-11eb-98e8-7130818dbc01.png">
+
 
 
  created variables to target the data and the appending them to the classes coresponding to the html. 
